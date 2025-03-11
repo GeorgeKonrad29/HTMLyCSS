@@ -1,0 +1,67 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cuerpo */
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: white;
+}
+
+/* Header */
+header {
+    display: flex;
+    background-color: black;
+    width: 100%;  /* Ocupa toda la pantalla */
+    height: 150px;  /* Header más grande */
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;  /* Más espacio interno para los rectángulos */
+}
+
+.rectangulo {
+    background-color: white;
+    width: 80px;  /* Rectángulos más grandes */
+    height: 60px;  /* Rectángulos más grandes */
+}
+
+/* Contenedor General */
+.contenedor {
+    display: flex;
+    flex-grow: 1;  /* Se adapta al tamaño disponible */
+    width: 100%;  /* Ocupa todo el ancho */
+    gap: 10px;  /* Espacio entre los cuadros y el main */
+    padding: 0;  /* Sin padding para que el main toque la esquina */
+}
+
+/* Cuadros a la Izquierda */
+.cuadros {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;  /* Espacio entre los cuadros */
+    flex-grow: 1;  /* Se adapta automáticamente */
+    margin-top: 3px;  /* Distancia mínima entre el header y los cuadros */
+    margin-right: 10px;  /* Distancia entre los cuadros y el main */
+}
+
+.cuadro {
+    background-color: lightgray;
+    height: calc(40vh - 30px);  /* Cuadros más pequeños */
+}
+
+/* Main (Panel Derecho) */
+main {
+    width: 20%;  /* Fijo al 20% de la pantalla */
+    background-color: black;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;  /* Sin margen para que toque la esquina */
+}
