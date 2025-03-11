@@ -1,12 +1,12 @@
-/* Reset */
+
+/* -----------------------------------------------------------------GENERAL--------------------------------------------------------------------------------------- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
-/* Cuerpo */
+/* -----------------------------------------------------------------GENERAL--------------------------------------------------------------------------------------- */
 body {
     display: flex;
     flex-direction: column;
@@ -14,15 +14,15 @@ body {
     background-color: white;
 }
 
-/* Header */
+/* -----------------------------------------------------------------HEADER--------------------------------------------------------------------------------------- */
 header {
     display: flex;
-    background-color: black;
-    width: 100%;  /* Ocupa toda la pantalla */
-    height: 200px;  /* Header más grande */
+    background-color: #232020;
+    width: 100%;  
+    height: 154px;  
     justify-content: space-around;
     align-items: center;
-    padding: 20px;  /* Más espacio interno para los rectángulos */
+    padding: 31px;  
 }
 
 .rectangulo {
@@ -30,53 +30,173 @@ header {
 }
 
 #Rec1 {
-    width: 700px;  
-    height: 60px;  
+    width: 400px;  
+    height: 46px;  
 }
+
 #Rec2 {
-    width: 300px;  
-    height: 60px;  
+    width: 250px;  
+    height: 46px;  
 }
 
-
-
-/* Contenedor General */
+/* Contenedor */
 .contenedor {
     display: flex;
-    flex-grow: 1;  /* Se adapta al tamaño disponible */
-    width: 100%;  /* Ocupa todo el ancho */
-    gap: 10px;  /* Espacio entre los cuadros y el main */
-    padding: 0;  /* Sin padding para que el main toque la esquina */
-    
+    flex-grow: 1;  
+    width: 100%;  
+    gap: 8px; 
+    padding: 0;  
 }
 
 /* Cuadros a la Izquierda */
 .cuadros {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    gap: 1px;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: repeat(2, 1fr); 
+    gap: -15px;  
+    row-gap: 46px;  
     flex-grow: 1;
-    margin-top: 60px;
-    margin-left: 50px; 
-    
-    
+    margin-top: 46px;  
+    margin-left: 38px;  
 }
 
 .cuadro {
-    background-color: lightgray;
-    width: 850px;  /* Cuadros más pequeños */
-    height: 800px;  /* Cuadros más pequeños */
+    background-color: rgb(238, 235, 235);
+
+    width: 550px;  
+    height: 550px;  
 }
 
-/* Main (Panel Derecho) */
+/* -----------------------------------------------------------------MAIN--------------------------------------------------------------------------------------- */
 main {
-    width: 27%;  /* Fijo al 20% de la pantalla */
-    background-color: black;
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0;  /* Sin margen para que toque la esquina */
-    
+    width: 30.8%;  
+    background-color: #141313;
+    padding: 23px;  
+    display: grid; 
+    grid-template-columns: 1fr 1fr;  
+    grid-template-rows: auto 1fr;  
+    gap: 8px;  
+}
+
+/* Superior Izquierdo */
+.superior-izquierdo {
+    grid-column: 1 / 2; 
+    grid-row: 1 / 2; 
+    display: flex;  
+    flex-direction: column;  
+    align-items: flex-end;  
+    gap: 23px;  
+    margin-top: 108px;  
+    width: 231px;  
+    height: 308px;  
+}
+
+.rectangulo1,
+.rectangulo2,
+.rectangulo3 {
+    width: 80%;  
+    height: 38px; 
+    margin-right: 38px;  
+}
+
+.rectangulo1 {
+    background-color: #e75757;  
+}
+
+.rectangulo2 {
+    width: 70%;  
+    background-color: #6b2c2c;  
+}
+
+.rectangulo3 {
+    width: 60%;  
+    background-color: #491d1d;  
+}
+
+/* Superior Derecho */
+.superior-derecho {
+    grid-column: 2 / 3;  
+    grid-row: 1 / 2;  
+    width: 231px; 
+    height: 154px;  
+}
+
+.circulo {
+    width: 231px;  
+    height: 231px;  
+    background-color: yellow;  
+    border-radius: 50%;  
+    border: 8px solid black;  
+    margin: auto; 
+    margin-top: 69px;  
+}
+
+/* Inferior */
+.inferior {
+    grid-column: 1 / 3;  
+    grid-row: 2 / 3;  
+    height: 100%;  
+    display: flex;  
+    flex-direction: column;  
+    align-items: flex-end;  
+    gap: 46px;  
+    padding: 8px;  
+}
+
+.rectangulo4,
+.rectangulo5,
+.rectangulo6,
+.rectangulo7,
+.rectangulo8,
+.rectangulo9,
+.rectangulo10,
+.rectangulo11,
+.rectangulo12,
+.rectangulo13,
+.rectangulo14 {
+    height: 31px; 
+    background-color: #e75757;  
+}
+
+.rectangulo4,
+.rectangulo7 {
+    width: 100%;  
+}
+
+.rectangulo5 {
+    width: 70%;  
+    background-color: yellow;  
+}
+
+.rectangulo9 {
+    width: 70%;  
+}
+
+.rectangulo8 {
+    width: 60%;  
+    background-color: #76ea61;  
+}
+
+.rectangulo6 {
+    width: 80%;  
+}
+
+.rectangulo10 {
+    width: 95%;  
+}
+
+.rectangulo11 {
+    width: 10%;  
+}
+
+.rectangulo12 {
+    width: 75%;  
+}
+
+.rectangulo13 {
+    width: 85%;  
+}
+
+.rectangulo14 {
+    width: 60%;  
 }
