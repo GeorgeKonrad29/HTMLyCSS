@@ -1,0 +1,245 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Encabezado */
+header {
+    display: flex;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border-bottom: 2px solid #444;
+}
+
+header .logo img {
+    width: 80px; /* Ajusta el tamaño del logo */
+    height: auto;
+}
+
+header .header-content {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centrar el título */
+    margin-left: 20px;
+}
+
+header .header-buttons {
+    display: flex;
+    justify-content: flex-end; /* Botones a la derecha */
+    flex-grow: 1;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+    margin-left: 40%; /* Ajusta este valor según lo que necesites */
+}
+
+header .header-buttons button {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+header .header-buttons button:hover {
+    background-color: #666;
+}
+
+header .user-logo img {
+    width: 40px; /* Ajusta el tamaño del logotipo de usuario */
+    height: 40px;
+    border-radius: 50%;
+    margin-left: 20px;
+}
+
+/* Barra de navegación */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Contenido del nav a la derecha */
+    background-color: #444;
+    padding: 10px 20px;
+    border-bottom: 2px solid #555;
+}
+
+nav .nav-buttons {
+    display: flex;
+    margin-right: auto; /* Mueve los botones a la izquierda */
+}
+
+nav .nav-buttons button {
+    background-color: #666;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+nav .nav-buttons button:hover {
+    background-color: #777;
+}
+
+nav .search-bar {
+    display: flex;
+    align-items: center;
+    width: 300px; /* Reducir el tamaño de la barra de búsqueda */
+}
+
+nav .search-bar input {
+    width: 70%;
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+}
+
+nav .search-bar button {
+    background-color: #666;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    margin-left: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+nav .search-bar button:hover {
+    background-color: #777;
+}
+
+/* Contenedor principal con dos columnas */
+.main-container {
+    display: flex;
+    padding: 20px;
+}
+
+/* Columna de publicidad (30%) */
+.publicidad {
+    width: 30%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+    text-align: center;
+}
+
+.publicidad h2 {
+    margin-top: 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.publicidad p {
+    margin: 0;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Columna de inicio de sesión (70%) */
+.login-section {
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.form-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+.login-button {
+    background-color: #555;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.login-button:hover {
+    background-color: #666;
+}
+
+.login-container p {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+.login-container p a {
+    color: #555;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-container p a:hover {
+    text-decoration: underline;
+}
+
+/* Pie de página */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
