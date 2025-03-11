@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iniciar Sesión - Librería UTP</title>
-    <link rel="stylesheet" href="/Tercer_punto/style/Main.css">
+    <link rel="stylesheet" href="/Tercer_punto/style/Login.css">
 </head>
 <body>
     <!-- Encabezado -->
@@ -20,7 +20,7 @@
             <div class="header-buttons">
                 <button>Visitantes</button>
                 <a href="/Tercer_punto/templates/Login.html">
-                    <button>Login</button>
+                    
                 </a>
             </div>
             <!-- Círculo con el logotipo de usuario -->
@@ -42,6 +42,8 @@
             <button>Buscar</button>
         </div>
     </nav>
+    
+
 
     <!-- Contenedor principal -->
     <main>
@@ -50,7 +52,7 @@
             <h2>Publicidad</h2>
             <p>Espacio reservado para publicidad.</p>
         </aside>
-
+        
         <!-- Sección de inicio de sesión (70%) -->
         <section class="login-section">
             <div class="login-container">
@@ -64,14 +66,11 @@
                         <label for="password">Contraseña:</label>
                         <input type="password" id="password" placeholder="contraseña" required>
                     </div>
-                    <div class="form-group">
-                        <label>
-                            <input type="checkbox"> ¿Olvidó la contraseña?
-                        </label>
-                    </div>
+                    <!-- Checkbox y texto "¿Olvidó la contraseña?" en un div aparte -->
+                    <p><a href="#">Olvidaste tu contraseña?</a></p>
                     <button type="submit" class="login-button">Ingresar</button>
                 </form>
-                <p>¿Aún no tienes cuenta? <a href="#">Regístrate</a></p>
+                <p>¿Aún no tienes cuenta? <a href="/Tercer_punto/templates/Register.html">Regístrate</a></p>
             </div>
         </section>
     </main>
