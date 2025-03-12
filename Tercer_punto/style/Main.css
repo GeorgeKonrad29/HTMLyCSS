@@ -1,19 +1,44 @@
+/* Definición de variables de color */
+:root {
+    --color-fondo: #f4f4f4;
+    --color-primario: #036F64;
+    --color-secundario: #025043;
+    --color-terciario: #023731;
+    --color-cuaternario: #023731;
+    --color-quinto: #023731;
+    --color-texto: #fff;
+    --color-texto-secundario: #333;
+    --color-texto-terciario: #555;
+    --color-borde: #ccc;
+    --color-sombra: rgba(0, 0, 0, 0.1);
+}
+
 /* Estilos generales */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: var(--color-fondo);
 }
 
 /* Encabezado */
 header {
     display: flex;
     align-items: center;
-    background-color: #333;
-    color: #fff;
+    background-color: var(--color-primario);
+    color: var(--color-texto);
     padding: 10px 20px;
-    border-bottom: 2px solid #444;
+    border-bottom: 2px solid var(--color-secundario);
+}
+
+header .logo button {
+    width: 80px;
+    height: auto;
+    background-color: var(--color-primario);
+    padding: 0 auto;
+    border: none;
+    margin: 0;
+    cursor: pointer;
 }
 
 header .logo img {
@@ -42,8 +67,8 @@ header h1 {
 }
 
 header .header-buttons button {
-    background-color: #555;
-    color: #fff;
+    background-color: var(--color-terciario);
+    color: var(--color-texto);
     border: none;
     padding: 8px 16px;
     margin-left: 10px;
@@ -52,7 +77,7 @@ header .header-buttons button {
 }
 
 header .header-buttons button:hover {
-    background-color: #666;
+    background-color: var(--color-cuaternario);
 }
 
 header .user-logo img {
@@ -67,9 +92,9 @@ nav {
     display: flex;
     align-items: center;
     justify-content: flex-end; /* Contenido del nav a la derecha */
-    background-color: #444;
+    background-color: var(--color-secundario);
     padding: 10px 20px;
-    border-bottom: 2px solid #555;
+    border-bottom: 2px solid var(--color-terciario);
 }
 
 nav .nav-buttons {
@@ -78,8 +103,8 @@ nav .nav-buttons {
 }
 
 nav .nav-buttons button {
-    background-color: #666;
-    color: #fff;
+    background-color: var(--color-cuaternario);
+    color: var(--color-texto);
     border: none;
     padding: 8px 16px;
     margin-right: 10px;
@@ -88,7 +113,7 @@ nav .nav-buttons button {
 }
 
 nav .nav-buttons button:hover {
-    background-color: #777;
+    background-color: var(--color-quinto);
 }
 
 nav .search-bar {
@@ -105,8 +130,8 @@ nav .search-bar input {
 }
 
 nav .search-bar button {
-    background-color: #666;
-    color: #fff;
+    background-color: var(--color-cuaternario);
+    color: var(--color-texto);
     border: none;
     padding: 8px 16px;
     margin-left: 10px;
@@ -115,29 +140,29 @@ nav .search-bar button {
 }
 
 nav .search-bar button:hover {
-    background-color: #777;
+    background-color: var(--color-quinto);
 }
 
 /* Sección de publicidad */
 .publicidad {
-    background-color: #fff;
+    background-color: var(--color-texto);
     padding: 20px;
     margin: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px var(--color-sombra);
     text-align: center;
 }
 
 .publicidad p {
     margin: 0;
     font-size: 18px;
-    color: #333;
+    color: var(--color-texto-secundario);
 }
 
 /* Pie de página */
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: var(--color-primario);
+    color: var(--color-texto);
     text-align: center;
     padding: 10px 0;
     position: fixed;
