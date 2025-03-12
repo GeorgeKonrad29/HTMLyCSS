@@ -1,30 +1,63 @@
+/* Definición de variables de color */
+:root {
+    --color-fondo: #f4f4f4;
+    --color-primario: #006400;
+    --color-secundario: #004600;
+    --color-terciario: #555;
+    --color-cuaternario: #666;
+    --color-quinto: #777;
+    --color-texto: #fff;
+    --color-texto-secundario: #000;
+    --color-texto-terciario: #555;
+    --color-borde: #ccc;
+    --color-sombra: rgba(0, 0, 0, 0.1);
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: var(--color-fondo);
 }
 
 header {
-    background-color: #333;
-    color: white;
+    background-color: var(--color-primario);
+    color: var(--color-texto);
     padding: 1em 0;
     text-align: center;
+    position: relative;
+}
+
+nav {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--color-secundario);
 }
 
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 1em;
 }
 
 nav ul li a {
-    color: white;
+    color: var(--color-texto);
     text-decoration: none;
+    padding: 0.5em 1em;
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: var(--color-cuaternario);
+    color: var(--color-texto-secundario);
 }
 
 main {
@@ -40,24 +73,91 @@ section {
 }
 
 article {
-    background-color: white;
+    background-color: var(--color-texto);
     margin-bottom: 1em;
     padding: 1em;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px var(--color-sombra);
+    position: relative; /* Necesario para el fondo semitransparente */
+}
+
+article h2, article p {
+    position: relative; /* Necesario para el fondo semitransparente */
+    z-index: 1; /* Asegura que el texto esté por encima del fondo semitransparente */
+}
+
+article::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    border-radius: 5px;
+    z-index: 0; /* Asegura que el fondo esté detrás del texto */
+}
+
+article:nth-of-type(1) {
+    background-image: url('../img/image.png'); /* Reemplaza con la URL de tu imagen */
+    background-size: cover;
+    background-position: center;
+    color: var(--color-texto); /* Asegúrate de que el texto sea legible */
+}
+
+article:nth-of-type(2) {
+    background-image: url('../img/image2.png'); /* Reemplaza con la URL de tu imagen */
+    background-size: cover;
+    background-position: center;
+    color: var(--color-texto); /* Asegúrate de que el texto sea legible */
+}
+
+article:nth-of-type(3) {
+    background-image: url('../img/image1.png'); /* Reemplaza con la URL de tu imagen */
+    background-size: cover;
+    background-position: center;
+    color: var(--color-texto); /* Asegúrate de que el texto sea legible */
 }
 
 aside {
     flex: 1;
     padding: 1em;
-    background-color: #e2e2e2;
+    background-color: var(--color-secundario);
     margin-left: 1em;
     border-radius: 5px;
 }
 
+aside h2 {
+    margin-top: 0;
+    font-size: 20px;
+    color: var(--color-texto);
+}
+
+aside ul {
+    list-style: none;
+    padding: 0;
+}
+
+aside ul li {
+    background-color: var(--color-texto);
+    margin-bottom: 1em;
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0 0 10px var(--color-sombra);
+}
+
+aside ul li a {
+    color: var(--color-texto-secundario);
+    text-decoration: none;
+}
+
+aside ul li a:hover {
+    color: var(--color-texto-terciario);
+}
+
 footer {
-    background-color: #333;
-    color: white;
+    background-color: var(--color-primario);
+    color: var(--color-texto);
     text-align: center;
     padding: 1em 0;
     position: relative;
@@ -76,21 +176,12 @@ footer {
     margin-right: 1em;
     height: 400px;
 }
+
 .noticia-principal article {
     height: 100%;
 }
 
-.noticias-secundarias {
-    flex: 3;
-    display: flex;
-    flex-direction: column;
-}
-
-.noticias-secundarias article {
-    margin-bottom: 1em;
-}
-
-.noticias{
+.noticias {
     display: flex;
     flex-wrap: wrap row;
 }
