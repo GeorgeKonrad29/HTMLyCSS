@@ -31,6 +31,7 @@ main {
     display: flex;
     flex-wrap: wrap;
     padding: 1em;
+    flex-direction: column;
 }
 
 section {
@@ -62,4 +63,34 @@ footer {
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+.noticias-adicionales {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2em;
+}
+
+.noticia-principal {
+    flex: 2;
+    margin-right: 1em;
+    height: 400px;
+}
+.noticia-principal article {
+    height: 100%;
+}
+
+.noticias-secundarias {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.noticias-secundarias article {
+    margin-bottom: 1em;
+}
+
+.noticias{
+    display: flex;
+    flex-wrap: wrap row;
 }
