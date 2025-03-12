@@ -15,8 +15,8 @@
 }
 
 #cuadroRedondeado {
-    width: 80%;
-    height: 80%;
+    width: 120px;
+    height: 120px;
     background-color: #FF5733;
     border-radius: 10%;
     display: flex;
@@ -24,15 +24,15 @@
 }
 
 #circulo {
-    width: 80%;
-    height: 80%;
+    width: 120px;
+    height: 120px;
     background-color: #FFC300;
     border-radius: 50%;
 }
 
 #cuadroEntero {
-    width: 80%;
-    height: 80%;
+    width: 120px;
+    height: 120px;
     background-color: #C70039;
     display: flex;
     justify-content: center;
@@ -186,14 +186,15 @@
     width: 100fr;
     height: 100fr;
     background-color: #f305e7;
-    border-radius: 10%;
-    grid-column-start: 3; /* Mueve este estilo al elemento hijo */
+    border-radius: 0;
+    grid-column-start: 3; 
+    rotate: 40deg;
 }
 #cuadroInferior3{
     width: 100fr;
     height: 100fr;
     background-color: #e90a27;
-    border-radius: 10%;
+    border-radius: 0;
     grid-column-start: 4; /* Mueve este estilo al elemento hijo */
 }
 .cuadradoInferior{
